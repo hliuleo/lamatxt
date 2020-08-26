@@ -1,0 +1,2 @@
+beautifulsoup4==4.7.1
+AdvancedHTMLParser==9.0.1
