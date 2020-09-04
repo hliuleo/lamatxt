@@ -7,7 +7,7 @@ import numpy as np
 src_dir = sys.argv[1] if len(sys.argv) >= 2 else '../'
 dirpath = os.getcwd()
 log_files = dirpath+"/result.txt"
-fw = open(log_files, "w")
+fw = open(log_files, "w", encoding="utf8")
 
 excludes = set(['code', 'resource', '新添加'])
 
@@ -20,7 +20,7 @@ def mismatched_tags():
 				if '.html' not in file or '.htm' not in file:
 					continue
 				filepath = os.path.join(root, file)
-				f = open(filepath, 'r')
+				f = open(filepath, 'r', encoding='utf8')
 				print(filepath)
 				soup = BeautifulSoup(f.read(), 'html.parser')
 				source = str(soup)
